@@ -11,7 +11,7 @@ public class Cars {
         this.cars = cars;
     }
 
-    public Cars(String carsInput){
+    public Cars(String carsInput) {
         String[] carsArr = carsInput.split(",");
         List<Car> carsList = new ArrayList<>();
 
@@ -20,6 +20,11 @@ public class Cars {
         }
         this.cars = carsList;
     }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
 
     @Override
     public boolean equals(Object o) {

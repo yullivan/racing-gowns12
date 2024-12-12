@@ -7,8 +7,19 @@ public class Car {
     int distanceTraveled;
 
     public Car(String name) {
+        if (name.length()>10){
+            throw new IllegalArgumentException("[ERROR] 글자수 초과!!");
+        }
         this.name = name;
         this.distanceTraveled = 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDistanceTraveled() {
+        return distanceTraveled;
     }
 
     @Override
