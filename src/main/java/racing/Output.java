@@ -31,9 +31,7 @@ public class Output {
         for (Car car : cars.getCars()) {
             System.out.printf(car.getName() + " ");
             System.out.print("🚗");
-            for (int i = 0; i < car.getDistanceTraveled(); i++) {
-                System.out.print("-");
-            }
+            System.out.print("-".repeat(car.distanceTraveled));
             System.out.println();
         }
         System.out.println();
