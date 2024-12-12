@@ -1,7 +1,7 @@
 package racing;
 
 public class Count {
-    int count;
+    private int count;
 
     public Count(int count) {
         if (count<1){

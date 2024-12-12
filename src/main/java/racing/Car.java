@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Car {
-    String name;
-    int distanceTraveled;
+    private String name;
+    private int distanceTraveled;
 
     public Car(String name) {
         if (name.length() > 10) {
