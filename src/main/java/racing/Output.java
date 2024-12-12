@@ -20,8 +20,8 @@ public class Output {
     }
 
     //시행 횟수 출력
-    public static void count(int count) {
-        System.out.println(": " + count);
+    public static void count(Count count) {
+        System.out.println(": " + count.getCount());
     }
 
     //게임화면 출력

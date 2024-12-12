@@ -14,6 +14,11 @@ public class Car {
         this.distanceTraveled = 0;
     }
 
+    public Car(String name, int distanceTraveled) {
+        this.name = name;
+        this.distanceTraveled = distanceTraveled;
+    }
+
     public String getName() {
         return name;
     }

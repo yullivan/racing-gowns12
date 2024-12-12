@@ -13,12 +13,12 @@ public class Application {
         Cars cars = new Cars(carsStr);
         Output.carNameOutput(carsStr);
         Output.countQuestion();
-        int count = Input.count();
+        Count count = Input.count();
         Output.count(count);
         System.out.println();
 
         //레이싱 시작
-        Output.game(cars, count);
+//        Output.game(cars, roundcount);
     }
 
 }

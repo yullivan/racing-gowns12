@@ -33,4 +33,22 @@ class ApplicationTests {
 
         Assertions.assertThat(cars2.equals(cars)).isTrue();
     }
+
+    @Test
+    void winner() {
+        Car car = new Car("A", 1);
+        Car car2 = new Car("B", 2);
+        Car car3 = new Car("C", 3);
+        Car car4 = new Car("D", 5);
+        Car car5 = new Car("F", 5);
+
+        List<Car> carList = List.of(car, car2, car3, car4, car5);
+
+        Cars cars = new Cars(carList);
+
+        List<Car> winner = GameController.winner(cars);
+
+        Assertions.assertThat(winner.equals(List.of(car4, car5))).isTrue();
+
+    }
 }

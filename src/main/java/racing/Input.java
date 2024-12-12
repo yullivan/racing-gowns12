@@ -21,8 +21,18 @@ public class Input {
     }
 
 
-    public static int count() {
+    public static Count count() {
         Scanner sc = new Scanner(System.in);
-        return sc.nextInt();
+        Count count;
+        while (true){
+            try {
+                count = new Count(sc.nextInt());
+                break;
+            }catch (IllegalArgumentException e){
+                System.out.println("시행 횟수는 최소 1번 이상이어야 합니다.");
+            }
+        }
+
+        return count;
     }
 }
