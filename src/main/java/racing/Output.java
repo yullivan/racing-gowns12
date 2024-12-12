@@ -10,7 +10,8 @@ public class Output {
     }
 
     //참가 자동차 목록 출력
-    public static void carNameOutput(String carsStr) {
+    public static void carNameOutput(Cars cars) {
+        List<String> carsStr = cars.getToCarsStr();
         System.out.println(": " + carsStr);
     }
 
@@ -25,10 +26,10 @@ public class Output {
     }
 
     //게임화면 출력
-    public static void game(Cars cars,int roundCount){
-        System.out.println("("+roundCount+")");
+    public static void game(Cars cars, int roundCount) {
+        System.out.println("(" + roundCount + ")");
         for (Car car : cars.getCars()) {
-            System.out.printf(car.getName()+" ");
+            System.out.printf(car.getName() + " ");
             System.out.print("🚗");
             for (int i = 0; i < car.getDistanceTraveled(); i++) {
                 System.out.print("-");
@@ -36,5 +37,11 @@ public class Output {
             System.out.println();
         }
         System.out.println();
+    }
+
+    //우승자 출력
+    public static void win(Cars winner) {
+        List<String> winnerStr = winner.getToCarsStr();
+        System.out.println("🏆우승자는 " + winnerStr + "!!");
     }
 }

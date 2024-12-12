@@ -25,6 +25,15 @@ public class Cars {
         return cars;
     }
 
+    public List<String> getToCarsStr() {
+        List<String> temp = new ArrayList<>();
+
+        for (Car car : cars) {
+            temp.add(car.getName());
+        }
+        return temp;
+    }
+
 
     @Override
     public boolean equals(Object o) {

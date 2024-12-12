@@ -1,5 +1,6 @@
 package racing;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Car {
@@ -7,7 +8,7 @@ public class Car {
     int distanceTraveled;
 
     public Car(String name) {
-        if (name.length()>10){
+        if (name.length() > 10) {
             throw new IllegalArgumentException("[ERROR] 글자수 초과!!");
         }
         this.name = name;
@@ -25,6 +26,10 @@ public class Car {
 
     public int getDistanceTraveled() {
         return distanceTraveled;
+    }
+
+    public void setDistanceTraveled(int distanceTraveled) {
+        this.distanceTraveled = distanceTraveled;
     }
 
     @Override
