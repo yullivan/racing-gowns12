@@ -1,0 +1,45 @@
+package racing;
+
+import java.util.List;
+
+public class Output {
+
+    //참가 자동차 목록을 요청
+    public static void carNameInput() {
+        System.out.println("레이스에 참가할 자동차들의 이름을 쉼표(,)로 구분하여 입력하세요.");
+    }
+
+    //참가 자동차 목록 출력
+    public static void carNameOutput(Cars cars) {
+        List<String> carsStr = cars.getToCarsStr();
+        System.out.println(": " + carsStr);
+    }
+
+    //몇 회 시행할 것인지 질문
+    public static void countQuestion() {
+        System.out.println("몇 회 시행할까요?");
+    }
+
+    //시행 횟수 출력
+    public static void count(Count count) {
+        System.out.println(": " + count.getCount());
+    }
+
+    //게임화면 출력
+    public static void game(Cars cars, int roundCount) {
+        System.out.println("(" + roundCount + ")");
+        for (Car car : cars.getCars()) {
+            System.out.printf(car.getName() + " ");
+            System.out.print("🚗");
+            System.out.print("-".repeat(car.getDistanceTraveled()));
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    //우승자 출력
+    public static void win(Cars winner) {
+        List<String> winnerStr = winner.getToCarsStr();
+        System.out.println("🏆우승자는 " + winnerStr + "!!");
+    }
+}
