@@ -18,7 +18,7 @@ public class Application {
         Game.game(cars, count);
 
         //우승자 시상
-        Cars winner = GameController.winner(cars);
+        Cars winner = cars.winner();
         Output.win(winner);
     }
 

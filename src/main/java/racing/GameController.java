@@ -20,18 +20,8 @@ public class GameController {
 
     public static void carMove(Car car, boolean move) {
         if (move) {
-            car.setDistanceTraveled(car.getDistanceTraveled() + 1);
+            car.move();
         }
     }
 
-
-    public static Cars winner(Cars cars) {
-        List<Integer> distances = cars.getCars().stream()
-                .map(Car::getDistanceTraveled)
-                .sorted().toList();
-
-        return new Cars(cars.getCars().stream()
-                .filter(car -> car.getDistanceTraveled() == distances.get(distances.size() - 1))
-                .toList());
-    }
 }

@@ -1,6 +1,5 @@
 package racing;
 
-import java.util.List;
 import java.util.Objects;
 
 public class Car {
@@ -28,8 +27,9 @@ public class Car {
         return distanceTraveled;
     }
 
-    public void setDistanceTraveled(int distanceTraveled) {
-        this.distanceTraveled = distanceTraveled;
+
+    public void move(){
+        distanceTraveled+=1;
     }
 
     @Override

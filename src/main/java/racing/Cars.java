@@ -34,6 +34,16 @@ public class Cars {
         return temp;
     }
 
+    public Cars winner() {
+        List<Integer> distances = cars.stream()
+                .map(Car::getDistanceTraveled)
+                .sorted().toList();
+
+        return new Cars(cars.stream()
+                .filter(car -> car.getDistanceTraveled() == distances.get(distances.size() - 1))
+                .toList());
+    }
+
 
     @Override
     public boolean equals(Object o) {
